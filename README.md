@@ -1,6 +1,9 @@
 # CNN-Based Human Presence Detection via Head Rotation Analysis
 
-This repo is composed of two main models.
+This repo is composed of three main sections. All of them have their own Jupyter notebook in the [notebooks](notebooks) directory.
+1. A CNN-based regression model.
+2. A yaw time-series generator.
+3. A classifier model.
 
 ## Regressor model
 The regressor model is a `CNN`-based model trained using a sub-dataset derived from the 300W-LP dataset, explicitly focusing on the head position attributes.
