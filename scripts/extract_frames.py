@@ -14,7 +14,6 @@ def extract_frames_ffmpeg(video_path, output_folder, interval=0.2):
         os.path.join(output_folder, 'frame_%04d.jpg')
     ]
 
-  
     subprocess.run(command, check=True)
     print(f"Frames extracted to {output_folder}")
 
