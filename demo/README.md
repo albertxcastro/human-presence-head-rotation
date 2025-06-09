@@ -4,12 +4,14 @@ This project demonstrates a novel method for human presence detection in video r
 
 This work aims to showcase the effectiveness of yaw-based temporal pattern analysis in human presence detection, highlighting a practical and scalable technique for real-time video applications.
 
+![Demo Screenshot](demo.png)
+
 ## How it Works
 
 The application follows these steps to classify a video:
 1.  A short video is recorded via the user's webcam.
 2.  The video is processed to extract individual frames.
-3.  A CNN-based yaw regressor model (`yaw_regressor_attention_cnn.keras`) predicts the yaw angle (horizontal head rotation) for each frame.
+3.  A CNN-based yaw regressor model (`yaw_regressor_attention_cnn.keras`) predicts the yaw angle (horizontal head rotation) for each frame. This step produces a time series that represent a head rotation pattern (Yaw angles versus Time).
 4.  The time-series data of yaw angles is transformed into a feature vector, capturing characteristics like the number of peaks and troughs in movement.
 5.  A classification model (`rotation_classifier_pipeline.joblib`) analyzes these features to determine if the rotation pattern corresponds to genuine human presence.
 6.  The final classification (e.g., "Human Detected") is displayed to the user.
